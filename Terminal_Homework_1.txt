@@ -1,0 +1,164 @@
+
+
+
+ 1) Посмотреть где я 
+    -pwd
+
+ 2) Создать в текущей папке новую папку «example1»	
+    -mkdir example1
+
+ 3) Зайти в папку «Number1»
+    -cd /users/valeria/git/Number1
+
+ 4) Создать 3 папки «example2»,«example3», «example4» в текущей папке
+    -mkdir example2 example3 example4
+
+ 5) Зайти в любую папку («example3»)
+    -cd /users/valeria/git/Number1/ example3
+
+ 6) Создать 5 файлов в текущей папке(3 txt,2 json)
+    -touch 1.txt 2.txt 3.txt 11.json 22.json
+
+    Создать 2 файла «aa.txt», «bb.txt» в необходимом месте 
+   (в папке«Number1») удаленно 
+   -touch /users/valeria/git/Number1/aa.txt /users/valeria/git/Number1/bb.txt
+
+ 7) Создать 3 папки  в необходимом месте удаленно (в папке
+    «git», в ней уже существует папка «Number1»)«Number2»,
+    « Number3», « Number4» 
+    -mkdir /users/valeria/git/Number1 Number2 Number3 Number4
+
+    Создать 2 папки  «one», «two» в необходимом 
+    месте удаленно (в папке «Number2»)
+    -mkdir /users/valeria/git/Number2/one /users/valeria/git/Number2/two
+
+ 8) Вывести список содержимого папки 
+    -ls
+
+ 9) Открыть любой txt файл («test1.txt»)
+    -nano /users/valeria/git/Number1/test1.txt
+
+ 10) Написать туда что-нибудь, любой текст
+     -Пишeм текст после п.9 
+
+ 11) Сохранить и выйти
+     -ctrlX+Y(yes)
+
+ 12) Выйти из папки на уровень выше
+     -cd ..
+
+ 13) Переместить из текущей папки любые 2 файла(«11.json», 
+     «22.json»), которые вы создали, в любую другую папку 
+     -mv 11.json 22.json /Users/valeria/git/Number1/example1
+
+     Переместить из текущей папки файл «aa.txt», в папку 
+     «Number2» изменив имя файла на «aa2.txt» 
+     -mv aa.txt /users/valeria/git/Number2/aa2.txt
+
+ 14) Скопировать из текущей папки любые 2 файла («1.txt»,
+     «2.txt»), которые вы создали, в любую другую папку («example1») 
+     -cp 1.txt 2.txt /users/valeria/git/Number1/example1 
+    
+     Скопировать из текущей папки файл «aa.txt»,
+     в папку «Number2» изменив имя файла на «aa2.txt»
+     -cp aa.txt /users/valeria/git/Number2/aa2.txt 
+
+ 15) Найти файл по имени «test»
+     -find /users/valeria/git -name «test*»
+
+     Найти файл по имени (не учитывая регистр)
+     -find /users/valeria/git -iname «test*»
+
+     Чтобы увидеть все файлы с расширением .txt
+     -find /users/valeria/git -name "*.txt"
+
+ 16) Команда grep: 
+     показать в файле «test1.txt» строку со словом ‘World»	
+     -grep "World" /users/valeria/git/Number1/test1.txt
+
+     в текущей папке найти файлы со словом "World" в файлах с разрешением .txt
+     -grep "World" *.txt
+
+ 17) вывести несколько первых строк (пяти) 
+     из текстового файла «test1.txt»
+     -head -5 test1.txt
+
+ 18) вывести несколько последних (четырех) строк 
+     из текстового файла «test1.txt»
+     -tail -4 test1.txt
+
+ 19) команда less :
+     в текущей папке открыть файл с именем 
+     «test1.txt», чтобы выйти ctrl+Z либо q
+     -less test1.txt
+
+     в текущей папке открыть файл с именем «test1.txt» и подсветить 
+     в нем необходимые все слова
+     -less -a test1.txt     затем в открывшемся файле ищем /name
+
+ 20) вывести дату и время	
+     -date
+
+ 21) перейти в домашнюю директорию 
+     -cd ~ либо cd
+
+ 22) перейти в корневую директорию
+     -cd /
+
+ 23) перейти на уровень выше к родительской папке
+      -cd ..
+
+ 23) перейти на два уровня выше к родительской папке
+     -cd .. / ..
+
+ 24) перейти назад (в папку, где находился ранее)
+     -cd -
+
+ 25) очистить консоль
+     -clear
+
+ 26) количество строк в файле «test1.txt»
+     -nl test1.txt
+
+ 27) вывести десять (по умолчанию) первых строк из текстового
+     файла «test1.txt»  ( если в файле меньше десяти строк, 
+     то покажет все существующие) 
+     -head test1.txt
+
+ 28) вывести десять (по умолчанию) последних строк из 
+     текстового файла «test1.txt» ( если в файле меньше 
+     десяти строк, то покажет все существующие) 
+     -tail  test1.txt
+
+ 29) создать в текущей папке 15 папок «Name1», 
+     «Name2», «Name3»,….. «Name15»
+     -mkdir -p Name{1..15}
+
+
+  ЗАДАНИЕ*
+
+1) Отправить http запрос на сервер.
+   http://162.55.220.72:5005/terminal-hw-request
+
+    http запрос:                                      curl http://162.55.220.72:5005/terminal-hw-request
+
+    Task1:                                            curl "http://162.55.220.72:5005/get_method?name=Valeria&age=27" 
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+
+   -создаем файл                                       -touch auto_script.txt
+   -открываем для редактирования                       -nano auto_script.txt
+   -вводим сценарий:
+    Назначить исполнителя                              -# #/bin/bush
+    (3)Зайти в папку                                   -cd /users/Valeria/git/HW1
+    (4)Создать 3 папки                                 -mkdir New1 New2 New3
+    (5)Зайти в любую папку                             -cd /users/Valeria/git/HW1/New1
+    (6)Создать 5 файлов (3txt, 2json)                  -touch one.txt two.txt three.txt one.json two.json
+    (7)Создать 3 папки                                 -mkdir N1 N2 N3
+    (8)Вывести список содержимого папки                -ls
+    (13)Переместить любые два файла                    -mv one.json two.json /users/Valeria/git/HW1/New1/N1
+
+    Сохраняем                                          -Ctrl+S, Enter
+    Объявляем файл auto_script.txt                     -chmod ugo+x auto_script.txt 
+    Запускаем                                          -./auto_script.txt  
+
