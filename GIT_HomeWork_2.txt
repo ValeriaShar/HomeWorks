@@ -1,0 +1,84 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+
+1) new repository 
+2) -git clone 
+3) -git commit --allow-empty -m "first commit"
+4) -git branch Postman
+5) -git branch Jmeter
+6) -git branch Checklists
+7) -git branch BugReports
+8) -git branch SQL 
+9) -git branch Charles
+10) -git branch MobileTesting
+11) проверим все ветки: -git branch -a
+12) -git commit --allow-empty -m "created new branches"
+
+
+2. Запушить все ветки на внешний репозиторий
+
+13) -git push -u origin Postman
+14) проверяем наличие ветки на GitHub, если отсутствует main, то добавляем ее:
+    -git push -u origin main    затем снова проверяем на GitHub
+15) -git push -u origin Jmeter
+16) -git push -u origin Checklists
+17) -git push -u origin BugReports
+18) -git push -u origin SQL
+19) -git push -u origin Charles
+20) -git push -u origin MobileTesting
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+21) -git checkout BugReports
+22) -touch bug_report.txt
+23) -nano bug_report.txt     пишем необходимый текст
+24) -git add bug_report.txt 
+25) -git commit -m "creat bug report.txt"
+
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+26) -git push origin BugReports
+
+5. Вмержить ветку Bag Reports в Main
+
+27) -git checkout main 
+28) -git merge BugReports      
+29) пишем комментарий затем :wq  (сохранить и выйти из vi)
+
+
+6. Запушить main на внешний репозиторий.
+
+30)-git push origin main
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+31)-git checkout CheckLists 
+32)-touch check_list.txt 
+33)-nano check_list.txt   пишем необходимый текст
+
+8. Запушить структуру на внешний репозиторий
+
+34)-git add check_list.txt
+35)-git commit -m "create check list.txt"
+36)-git push origin Checklists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+37) - на веб интерфейсе github.com в репозитории Branches перейти на закладку Pull requests. New pull request. Выбрать ветки слияния (куда-base: main /откуда- compare: Check_lists). Create pull request. Create pull request. (Leave a comment -заполняем при необходимости). Merge pull request. Confirm merge.
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+38)-git checkout main
+39)-git fetch 
+40)-git pull origin main
+
